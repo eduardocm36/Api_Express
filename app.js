@@ -1,8 +1,8 @@
-const config = require("./config")
+import { env } from "./config";
 
 const express = require('express');
 const app = express();
-const port = config.PORT;
+const port = env.PORT;
 
 app.get('/:id/rol/:rol', (request, response) => {
   const { id, rol } = request.params
@@ -14,5 +14,4 @@ app.get('/:id/rol/:rol', (request, response) => {
     civil: false
   });
 }).listen(port, () => {
-  console.log('my port con env')
 })
