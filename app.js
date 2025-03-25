@@ -8,7 +8,7 @@ app.get('/:id/rol/:rol', (request, response) => {
   const { id, rol } = request.params
   response.json({
     id,
-    name: "Eduardo",
+    name: "JOse",
     rol,
     age: 25,
     civil: false
